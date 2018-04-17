@@ -1,20 +1,25 @@
 const express = require('express');
 const path = require('path');
-const bodyParser = reuqire('bodyParser');
+const bodyParser = require('body-parser');
 const fs = require('fs');
 
 let app = express();
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set('views', './views');
+app.set('view engine', 'Pug');
 
-app.get('/', (req, res) => {
-  res.render('index',{
-    title:'this is a variable title', //could also equal something outside of script.js
-    message:'This is my message',
-    partial:'are cool!'
-  });
-});
+app.get('/', function (req, res) {
+  res.render('index');
+})
+app.get('/edituser', function (req, res) {
+  res.render('editUser');
+})
+app.get('/createuser', function (req, res) {
+  res.render('createUser');
+})
+app.post('/', function(req, res) {
+  console.log('Yo, I got a post request. Behringer is great.');
+})
 
 app.listen(3000);
 
