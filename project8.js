@@ -10,7 +10,9 @@ app.set('view engine', 'Pug');
 
 app.get('/', function (req, res) {
   //Do something here with the file system that allows pug to access a JSON object I think?
-  res.render('index');
+  var obj = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+  console.log(obj);
+  res.render('index', {data: obj});
   console.log('Index page request fulfilled');
 })
 app.get('/edituser', function (req, res) {

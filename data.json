@@ -1,5 +1,4 @@
 [
-  1{},
-  2{},
-  3{},
+  {"name":"Mark Zuckerberg", "id":"LizardKing", "email":"cheilflizardperson@iluminati.net", "age":3142},
+  {"name":"Elon Musk", "id":"AiSummoner", "email":"dankboi@spacex.com", "age":46}
 ]
