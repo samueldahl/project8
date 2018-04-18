@@ -9,11 +9,13 @@ app.set('views', './views');
 app.set('view engine', 'Pug');
 
 app.get('/', function (req, res) {
+  //Do something here with the file system that allows pug to access a JSON object I think?
   res.render('index');
   console.log('Index page request fulfilled');
 })
 app.get('/edituser', function (req, res) {
   res.render('editUser');
+  res.send('script.js');
   console.log('Edit user page request fufilled');
 })
 app.get('/createuser', function (req, res) {
