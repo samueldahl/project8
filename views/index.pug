@@ -10,13 +10,12 @@ html
       a(href='/createuser') create user
       table
         each user in data
-          tr 
+          tr
             td= user.name
             td= user.id
             td= user.email
             td= user.age
             td
-              button delete user
+              button(onclick='deleteuser();') delete user
             td
               a(href='/edituser') edit user
-            

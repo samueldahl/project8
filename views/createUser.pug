@@ -4,15 +4,17 @@ html
       title create user
     body
       a(href = '/') Cancel and go back to user list.
-      form
+      form(method='post' action='/')
         span name
-        input 
+        input(name='name')
         br
         span user id
-        input
+        input(name='id')
         br
         span email address
-        input
+        input(name='email')
         br
         span age
-        input
+        input(name='age')
+        br
+        button ADD DAT USER BOI
