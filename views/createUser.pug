@@ -2,9 +2,10 @@ doctype html
 html
     head
       title create user
+      script 
     body
       a(href = '/') Cancel and go back to user list.
-      form(method='POST', action='/userTarget')
+      form(method='POST', action='/usertarget')
         span name
         input(name='name', value="who dat?", required)
         br

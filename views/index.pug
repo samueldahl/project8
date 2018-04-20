@@ -2,7 +2,7 @@ doctype html
 html
     head
       title user list
-      script console.log('IT WORKS, ITS A CHRISTMAS MIRACLE');
+      script(src='script.js')
       style 
     body
       h1(style='color:red') home fo yo broha and his brohas.
@@ -23,6 +23,6 @@ html
             td= user.email
             td= user.age
             td
-              button(onclick='deleteuser();') delete user
+              button(onclick='deleteUser(this, \'' + user.id + '\')') delete user
             td
-              a(href='/edituser') edit user
+              button(onclick='editUser(\'' + user.id + '\')') edit user
