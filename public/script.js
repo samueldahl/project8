@@ -1,4 +1,3 @@
-console.log('whoDat?');
 function deleteUser(self, user) {
   function reqListener () {
     console.log(this.responseText);
@@ -17,7 +16,7 @@ function deleteUser(self, user) {
     user: user
   }));
 }
-function editUser(user) {
-  console.log(user);
-  dank = new XMLHttpRequest();
+
+function editUser(self, user) {
+  window.location = '/edituser/' + user;
 }
